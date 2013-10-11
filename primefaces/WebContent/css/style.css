@@ -1,0 +1,50 @@
+a{
+	font-weight:bold;
+	text-decoration:underline;
+	hover:cursor;
+	
+}
+a:hover{
+	color:blue;
+	
+	}
+
+div{
+	font-weight:bold;
+	text-align:center;
+	}
+
+.website{
+		color:red;
+		text-align:center;
+		font-family:"ºÚÌå";
+		font-weight:bold;
+	}
+.loantype{
+		color:blue;
+		text-align:center;
+		font-family:"ºÚÌå";
+	}
+.obligorid{
+	text-align:center;
+	}
+.money{
+	text-align:center;
+	}
+.duration{
+	text-align:center;
+	}
+.yearinterestrate{
+	color:green;
+	text-align:center;
+	font-weight:bold;
+	}
+.yearincomerate{
+	
+	text-align:center;
+	font-weight:bold;
+	}
+#remember{
+	margin-left:30px;
+	
+	}

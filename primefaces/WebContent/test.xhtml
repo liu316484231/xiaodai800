@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+<h:form>  
+  
+    <p:growl id="messages"/>  
+  
+  
+    <p:menubar>  
+        
+  
+        <f:facet name="options">  
+        	
+				       		
+		        	<h:outputText value="用户名：" />
+		        	<p:inputText style="margin-right:10px"/>
+		       
+		        	<h:outputText value="密码：" />  
+		            <p:inputText style="margin-right:10px"/>
+		       
+		         
+		            <p:commandButton type="button" value="Login" icon="ui-icon-extlink" />  
+		            <p:commandButton type="button" value="Register" icon="ui-icon-extlink" />
+				         
+             
+            
+        </f:facet>  
+    </p:menubar>  
+  
+  
+</h:form>  
+ 
+	<p:tabMenu activeIndex="0">
+		<p:menuitem value="index" url="#" icon="ui-icon-star" />
+		<p:menuitem value="contacts" url="#" />
+	</p:tabMenu>
+
+
+<h:form>  
+
+  
+    <p:dataTable id="dataTable" var="car" value="#{tableBean.carsSmall}"   
+            emptyMessage="No cars found with given criteria" >  
+  
+         <f:facet name="header">  
+            title
+        </f:facet>  
+  
+        <p:column id="modelColumn" filterBy="#{car.model}"   
+                headerText="Model" footerText="contains"  
+                filterMatchMode="contains">  
+            <h:outputText value="#{car.model}" />  
+        </p:column>  
+  
+        <p:column id="yearColumn" filterBy="#{car.year}"  
+                headerText="Year" footerText="startsWith">  
+            <h:outputText value="#{car.year}" />  
+        </p:column>  
+  
+      
+        <p:column id="colorColumn" filterBy="#{car.color}"  
+                headerText="Color" footerText="endsWith" filterMatchMode="endsWith">  
+            <h:outputText value="#{car.color}" />  
+        </p:column>  
+    </p:dataTable>  
+      
+</h:form>  
+                     
+              
+</h:body>
+</html>
