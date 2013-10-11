@@ -30,11 +30,7 @@
 		}
 		setTimeout("reflesh()",60*1000*2);
 		
-		$(document).ready(function(){
-
-			$("tr:even").css("background-color", "yellow");
-
-			});
+		
 	
 	</script>
 	<style>
@@ -43,6 +39,9 @@
 		}
 		.green{
 			color:green;
+		}
+		.yellow{
+			background:#C9CEF2;
 		}
 	</style>
 </h:head>
@@ -60,7 +59,7 @@
 		
 		
   
-    <p:dataTable id="dataTable" var="lfb" value="#{tableBean2.loanInfoList}" rowIndexVar="row" >  
+    <p:dataTable id="dataTable" var="lfb" value="#{tableBean2.loanInfoList}" rowIndexVar="row" rowStyleClass="#{row%2==0?'yellow':null}" >  
         <f:facet name="header" >  
             	实时数据 
         </f:facet>  
