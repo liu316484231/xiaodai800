@@ -11,12 +11,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>小贷800</title>
 		<style>
-		.red{
-			color:red;
-		}
-		.green{
-			color:green;
-		}
 		.yellow{
 			background:#C9CEF2;
 		}
@@ -36,7 +30,7 @@
   
     <p:dataTable id="dataTable" var="data" value="#{webDataBean.list}" rowIndexVar="row" rowStyleClass="#{row%2==0?'yellow':null}" >  
         <f:facet name="header" >  
-            	实时数据 
+            	网站平台数据对比
         </f:facet>  
         
       <p:column  headerText="序号"  >  
@@ -45,24 +39,24 @@
   
   			
         <p:column  headerText="平台"  >  
-            <div ><a href=""><h:outputText value="#{data.websiteName}" style=""/> </a></div>  
+            <div ><a href="#{data.link}"><h:outputText value="#{data.webSiteName}" style="color:blue"/> </a></div>  
         </p:column>  
        
         
-          <p:column headerText="上线时间" >  
-            <div ><h:outputText value="#{data.startTime}" style=""/> </div>
+          <p:column headerText="上线时间" sortBy="#{data.startTime}" >  
+            <div ><h:outputText value="#{data.startTime}" style="color:green"/> </div>
         </p:column>  
         
-          <p:column  headerText="注册资金">  
-           <div > <h:outputText value="#{data.registerMoney}" /></div>
+          <p:column  headerText="注册资金" sortBy="#{data.registerMoney}" >  
+           <div > <h:outputText value="#{data.registerMoney}" style="color:red"/></div>
         </p:column>  
         
           <p:column  headerText="法人" >  
-            <div ><h:outputText value="￥#{data.faren}" /></div>  
+            <div ><h:outputText value="￥#{data.faren}" style="color:green"/></div>  
         </p:column>  
         
           <p:column  headerText="总部城市">  
-            <div ><h:outputText value="#{data.city}" /> </div>
+            <div ><h:outputText value="#{data.city}" style="color:red"/> </div>
         </p:column>  
         
           <p:column  headerText="第三方支付">  
@@ -82,7 +76,7 @@
         </p:column>  
         
           <p:column  headerText="VIP年费">  
-            <div><h:outputText value="#{data.vip}%" /></div>  
+            <div><h:outputText value="#{data.vip}" /></div>  
         </p:column>  
        
         

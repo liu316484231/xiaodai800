@@ -11,7 +11,14 @@ public class WebDataBean {
 	private String guanli;
 	private String dianfu;
 	private String vip;
+	private String link;
 	
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
+	}
 	public String getWebSiteName() {
 		return webSiteName;
 	}
