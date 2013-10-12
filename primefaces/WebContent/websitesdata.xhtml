@@ -10,9 +10,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>小贷800</title>
-	<style>
-	
-	
+		<style>
+		.red{
+			color:red;
+		}
+		.green{
+			color:green;
+		}
+		.yellow{
+			background:#C9CEF2;
+		}
 	</style>
 </h:head>
 <h:body>
@@ -27,14 +34,59 @@
 		
 		
   
-    <p:dataTable id="dataTable" var="lfb"  >  
-        <f:facet name="header">  
-            	网站平台数据对比
+    <p:dataTable id="dataTable" var="data" value="#{webDataBean.list}" rowIndexVar="row" rowStyleClass="#{row%2==0?'yellow':null}" >  
+        <f:facet name="header" >  
+            	实时数据 
         </f:facet>  
         
-      
+      <p:column  headerText="序号"  >  
+            <div class="id"><h:outputText value="#{row+1}" /></div>  
+        </p:column> 
   
-  		
+  			
+        <p:column  headerText="平台"  >  
+            <div ><a href=""><h:outputText value="#{data.websiteName}" style=""/> </a></div>  
+        </p:column>  
+       
+        
+          <p:column headerText="上线时间" >  
+            <div ><h:outputText value="#{data.startTime}" style=""/> </div>
+        </p:column>  
+        
+          <p:column  headerText="注册资金">  
+           <div > <h:outputText value="#{data.registerMoney}" /></div>
+        </p:column>  
+        
+          <p:column  headerText="法人" >  
+            <div ><h:outputText value="￥#{data.faren}" /></div>  
+        </p:column>  
+        
+          <p:column  headerText="总部城市">  
+            <div ><h:outputText value="#{data.city}" /> </div>
+        </p:column>  
+        
+          <p:column  headerText="第三方支付">  
+            <div ><h:outputText value="#{data.payMethod}" /></div>  
+        </p:column>  
+        
+        <p:column headerText="提现费用" >  
+            <div ><h:outputText value="#{data.tixian}" /></div>  
+        </p:column>  
+        
+        <p:column  headerText="管理费用">  
+            <div ><h:outputText value="#{data.guanli}" /></div>  
+        </p:column>  
+        
+        <p:column  headerText="本金垫付">  
+            <div><h:outputText value="#{data.dianfu}" /></div>  
+        </p:column>  
+        
+          <p:column  headerText="VIP年费">  
+            <div><h:outputText value="#{data.vip}%" /></div>  
+        </p:column>  
+       
+        
+       
         
         
         

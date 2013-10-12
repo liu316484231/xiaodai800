@@ -162,73 +162,73 @@ public class LoanInfoBean implements Serializable{
 	}
 	
 	public String webSiteNameChangeColor(){
-		if(this.websiteName.equals("ÈËÈË´û")){
+		if(this.websiteName.equals("ï¿½ï¿½ï¿½Ë´ï¿½")){
 			return "#1CA5B8";
-		}else if(this.websiteName.equals("ìÏÂ¡´´Í¶")){
+		}else if(this.websiteName.equals("ï¿½ï¿½Â¡ï¿½ï¿½Í¶")){
 			return "#1E56BD";
-		}else if(this.websiteName.equals("ºìÁë´´Í¶")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ë´´Í¶")){
 			return "#21D1A5";
-		}else if(this.websiteName.equals("808ÐÅ´û")){
+		}else if(this.websiteName.equals("808ï¿½Å´ï¿½")){
 			return "#1DDE20";
-		}else if(this.websiteName.equals("Ò»ÆðºÃ")){
+		}else if(this.websiteName.equals("Ò»ï¿½ï¿½ï¿½")){
 			return "#CC2F54";
-		}else if(this.websiteName.equals("Áú³ÇÒ×´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ï¿½×´ï¿½")){
 			return "#8A0F2C";
-		}else if(this.websiteName.equals("¹ãÐÅ´û  ")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Å´ï¿½  ")){
 			return "#D124BA";
-		}else if(this.websiteName.equals("ÆëÂ³ÈË´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½Â³ï¿½Ë´ï¿½")){
 			return "#69045B";
-		}else if(this.websiteName.equals("ÅóÓÑ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ñ´ï¿½")){
 			return "#750EC9";
-		}else if(this.websiteName.equals("ÎÂÖÝ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ý´ï¿½")){
 			return "#E0341D";
-		}else if(this.websiteName.equals("×Ï·ãÐÅ´û")){
+		}else if(this.websiteName.equals("ï¿½Ï·ï¿½ï¿½Å´ï¿½")){
 			return "#E31C02";
-		}else if(this.websiteName.equals("ÒøÍ¨´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½Í¨ï¿½ï¿½")){
 			return "#9E9C09";
-		}else if(this.websiteName.equals("²Ý¸ùÐÂ´û")){
+		}else if(this.websiteName.equals("ï¿½Ý¸ï¿½ï¿½Â´ï¿½")){
 			return "#0AA197";
-		}else if(this.websiteName.equals("¿ìËÙ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ù´ï¿½")){
 			return "#09223B";
-		}else if(this.websiteName.equals("My±ê¿Í")){
+		}else if(this.websiteName.equals("Myï¿½ï¿½ï¿½")){
 			return "#0C82F7";
-		}else if(this.websiteName.equals("·Ç³ÏÎð´û")){
+		}else if(this.websiteName.equals("ï¿½Ç³ï¿½ï¿½ï¿½ï¿½")){
 			return "#3C0342";
-		}else if(this.websiteName.equals("È«Ãñ´û")){
+		}else if(this.websiteName.equals("È«ï¿½ï¿½ï¿½")){
 			return "#DC11F2";
-		}else if(this.websiteName.equals("Ò×´û365")){
+		}else if(this.websiteName.equals("ï¿½×´ï¿½365")){
 			return "#403E40";
-		}else if(this.websiteName.equals("½úÉÌ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ì´ï¿½")){
 			return "#1386EB";
-		}else if(this.websiteName.equals("EËÙ´û")){
+		}else if(this.websiteName.equals("Eï¿½Ù´ï¿½")){
 			return "#E86A10";
-		}else if(this.websiteName.equals("Ê¢ÈÚÔÚÏß")){
+		}else if(this.websiteName.equals("Ê¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#0B7A2E";
-		}else if(this.websiteName.equals("Î¢´ûÍø")){
+		}else if(this.websiteName.equals("Î¢ï¿½ï¿½ï¿½ï¿½")){
 			return "#182E1F";
-		}else if(this.websiteName.equals("ÃÀ´ûÍø")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#0FA8D6";
-		}else if(this.websiteName.equals("ÈÚÐÅ²Æ¸»")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Å²Æ¸ï¿½")){
 			return "#960E14";
-		}else if(this.websiteName.equals("¹¤ÉÌ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ì´ï¿½")){
 			return "#3D0608";
-		}else if(this.websiteName.equals("É½¶«´û")){
+		}else if(this.websiteName.equals("É½ï¿½ï¿½ï¿½ï¿½")){
 			return "#AB09AB";
-		}else if(this.websiteName.equals("ÍÅ´ûÍø")){
+		}else if(this.websiteName.equals("ï¿½Å´ï¿½ï¿½ï¿½")){
 			return "#524952";
-		}else if(this.websiteName.equals("Ò×Íø´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#7D12E0";
-		}else if(this.websiteName.equals("°®´ûÍø")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#310A57";
-		}else if(this.websiteName.equals("ËÄ´ïÍ¶×Ê")){
+		}else if(this.websiteName.equals("ï¿½Ä´ï¿½Í¶ï¿½ï¿½")){
 			return "#0BBF89";
-		}else if(this.websiteName.equals("³©´ûÍø")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#0AF5AE";
-		}else if(this.websiteName.equals("È«³Ï´û")){
+		}else if(this.websiteName.equals("È«ï¿½Ï´ï¿½")){
 			return "#070D0B";
-		}else if(this.websiteName.equals("Í¨ÈÚÒ×´û")){
+		}else if(this.websiteName.equals("Í¨ï¿½ï¿½ï¿½×´ï¿½")){
 			return "#273833";
-		}else if(this.websiteName.equals("ÅÄÅÄ´û")){
+		}else if(this.websiteName.equals("ï¿½ï¿½ï¿½Ä´ï¿½")){
 			return "#FA1302";
 		}else{
 			return null;
@@ -236,26 +236,26 @@ public class LoanInfoBean implements Serializable{
 		
 	}
 	public String repaymentModeChangeColor(){
-		if(this.repaymentMode.equals("°´ÔÂ»¹¿î")){
+		if(this.repaymentMode.equals("ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½")){
 			return "#8A1B13";
-		}else if(this.repaymentMode.equals("°´¼¾»¹¿î")){
+		}else if(this.repaymentMode.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#D9E620";
-		}else if(this.repaymentMode.equals("µ½ÆÚ»¹¿î")){
+		}else if(this.repaymentMode.equals("ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½")){
 			return "#127505";
 		}else{
 			return "black";
 		}
 	}
 	public String loanTypeChangeColor(){
-		if(this.loanType.equals("ÐÅÓÃ±ê")){
+		if(this.loanType.equals("ï¿½ï¿½ï¿½Ã±ï¿½")){
 			return "blue";
-		}else if(this.loanType.equals("¾»Öµ±ê")){
+		}else if(this.loanType.equals("ï¿½ï¿½Öµï¿½ï¿½")){
 			return "#C4A00E";
-		}else if(this.loanType.equals("ÍÆ¼ö±ê")){
+		}else if(this.loanType.equals("ï¿½Æ¼ï¿½ï¿½ï¿½")){
 			return "#A90EC4";
-		}else if(this.loanType.equals("µ£±£±ê")){
+		}else if(this.loanType.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")){
 			return "#0CC94E";
-		}else if(this.loanType.equals("Á÷×ª±ê")){
+		}else if(this.loanType.equals("ï¿½ï¿½×ªï¿½ï¿½")){
 			return "red";
 		}else{
 			return null;
@@ -270,5 +270,11 @@ public class LoanInfoBean implements Serializable{
 		}else{
 			return null;
 		}
+	}
+	public String durationMonthsFormat(){
+		return this.durationMonths+"ä¸ªæœˆ";
+	}
+	public String durationDaysFormat(){
+		return this.durationDays+"å¤©";
 	}
 }
