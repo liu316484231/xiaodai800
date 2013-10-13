@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("id", id);
 		
-		response.sendRedirect("/jsf_primefaces_test/loggedin/index.jsp");
+		response.sendRedirect("/primefaces/loggedin/index.jsp");
 	}
 
 	/**

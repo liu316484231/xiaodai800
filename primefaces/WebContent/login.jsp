@@ -27,6 +27,14 @@
 			alert("密码只能有字母和数字组成");
 			return false;
 		}
+		if(id.length>10){
+			alert("用户名过长，不能超过10个字符");
+			return false;
+		}
+		if(pwd.length<6){
+			alert("密码强度太弱，不能少于6个字符");
+			return false;
+		}
 		return true;
 		
 	}

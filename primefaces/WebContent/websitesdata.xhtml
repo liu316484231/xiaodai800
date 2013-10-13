@@ -38,7 +38,7 @@
         </p:column> 
   
   			
-        <p:column  headerText="平台"  >  
+        <p:column  headerText="平台" style="width:80px">  
             <div ><a href="#{data.link}"><h:outputText value="#{data.webSiteName}" style="color:blue"/> </a></div>  
         </p:column>  
        
@@ -51,11 +51,11 @@
            <div > <h:outputText value="#{data.registerMoney}" style="color:red"/></div>
         </p:column>  
         
-          <p:column  headerText="法人" >  
-            <div ><h:outputText value="￥#{data.faren}" style="color:green"/></div>  
+          <p:column  headerText="法人" style="width:80px" >  
+            <div ><h:outputText value="#{data.faren}" style="color:green"/></div>  
         </p:column>  
         
-          <p:column  headerText="总部城市">  
+          <p:column  headerText="总部城市"  style="width:80px">  
             <div ><h:outputText value="#{data.city}" style="color:red"/> </div>
         </p:column>  
         

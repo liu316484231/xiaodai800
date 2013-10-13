@@ -2,7 +2,9 @@ package com.xiaodai.bean;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class LoanInfoBean implements Serializable{
 	private int id;
@@ -162,73 +164,73 @@ public class LoanInfoBean implements Serializable{
 	}
 	
 	public String webSiteNameChangeColor(){
-		if(this.websiteName.equals("���˴�")){
+		if(this.websiteName.equals("煜隆创投")){
 			return "#1CA5B8";
-		}else if(this.websiteName.equals("��¡��Ͷ")){
+		}else if(this.websiteName.equals("红岭创投")){
 			return "#1E56BD";
-		}else if(this.websiteName.equals("���봴Ͷ")){
+		}else if(this.websiteName.equals("808信贷")){
 			return "#21D1A5";
-		}else if(this.websiteName.equals("808�Ŵ�")){
+		}else if(this.websiteName.equals("一起好")){
 			return "#1DDE20";
-		}else if(this.websiteName.equals("һ���")){
+		}else if(this.websiteName.equals("龙城易贷")){
 			return "#CC2F54";
-		}else if(this.websiteName.equals("����״�")){
+		}else if(this.websiteName.equals("广信贷 ")){
 			return "#8A0F2C";
-		}else if(this.websiteName.equals("���Ŵ�  ")){
+		}else if(this.websiteName.equals("齐鲁人贷")){
 			return "#D124BA";
-		}else if(this.websiteName.equals("��³�˴�")){
+		}else if(this.websiteName.equals("朋友贷 ")){
 			return "#69045B";
-		}else if(this.websiteName.equals("���Ѵ�")){
+		}else if(this.websiteName.equals("温州贷")){
 			return "#750EC9";
-		}else if(this.websiteName.equals("���ݴ�")){
+		}else if(this.websiteName.equals("紫枫信贷")){
 			return "#E0341D";
-		}else if(this.websiteName.equals("�Ϸ��Ŵ�")){
+		}else if(this.websiteName.equals("人人贷 ")){
 			return "#E31C02";
-		}else if(this.websiteName.equals("��ͨ��")){
+		}else if(this.websiteName.equals("银通贷")){
 			return "#9E9C09";
-		}else if(this.websiteName.equals("�ݸ��´�")){
+		}else if(this.websiteName.equals("草根新贷")){
 			return "#0AA197";
-		}else if(this.websiteName.equals("���ٴ�")){
+		}else if(this.websiteName.equals("快速贷")){
 			return "#09223B";
-		}else if(this.websiteName.equals("My���")){
+		}else if(this.websiteName.equals("My标客")){
 			return "#0C82F7";
-		}else if(this.websiteName.equals("�ǳ����")){
+		}else if(this.websiteName.equals("非诚勿贷")){
 			return "#3C0342";
-		}else if(this.websiteName.equals("ȫ���")){
+		}else if(this.websiteName.equals("全民贷")){
 			return "#DC11F2";
-		}else if(this.websiteName.equals("�״�365")){
+		}else if(this.websiteName.equals("易贷365")){
 			return "#403E40";
-		}else if(this.websiteName.equals("���̴�")){
+		}else if(this.websiteName.equals("晋商贷")){
 			return "#1386EB";
-		}else if(this.websiteName.equals("E�ٴ�")){
+		}else if(this.websiteName.equals("E速贷")){
 			return "#E86A10";
-		}else if(this.websiteName.equals("ʢ������")){
+		}else if(this.websiteName.equals("盛融在线")){
 			return "#0B7A2E";
-		}else if(this.websiteName.equals("΢����")){
+		}else if(this.websiteName.equals("微贷网")){
 			return "#182E1F";
-		}else if(this.websiteName.equals("������")){
+		}else if(this.websiteName.equals("美贷网")){
 			return "#0FA8D6";
-		}else if(this.websiteName.equals("���ŲƸ�")){
+		}else if(this.websiteName.equals("融信财富")){
 			return "#960E14";
-		}else if(this.websiteName.equals("���̴�")){
+		}else if(this.websiteName.equals("工商贷 ")){
 			return "#3D0608";
-		}else if(this.websiteName.equals("ɽ����")){
+		}else if(this.websiteName.equals("山东贷 ")){
 			return "#AB09AB";
-		}else if(this.websiteName.equals("�Ŵ���")){
+		}else if(this.websiteName.equals("团贷网")){
 			return "#524952";
-		}else if(this.websiteName.equals("�����")){
+		}else if(this.websiteName.equals("易网贷")){
 			return "#7D12E0";
-		}else if(this.websiteName.equals("������")){
+		}else if(this.websiteName.equals("爱贷网")){
 			return "#310A57";
-		}else if(this.websiteName.equals("�Ĵ�Ͷ��")){
+		}else if(this.websiteName.equals("四达投资")){
 			return "#0BBF89";
-		}else if(this.websiteName.equals("������")){
+		}else if(this.websiteName.equals("畅贷网")){
 			return "#0AF5AE";
-		}else if(this.websiteName.equals("ȫ�ϴ�")){
+		}else if(this.websiteName.equals("全诚贷")){
 			return "#070D0B";
-		}else if(this.websiteName.equals("ͨ���״�")){
+		}else if(this.websiteName.equals("ͨ融易贷")){
 			return "#273833";
-		}else if(this.websiteName.equals("���Ĵ�")){
+		}else if(this.websiteName.equals("拍拍贷")){
 			return "#FA1302";
 		}else{
 			return null;
@@ -236,26 +238,26 @@ public class LoanInfoBean implements Serializable{
 		
 	}
 	public String repaymentModeChangeColor(){
-		if(this.repaymentMode.equals("���»���")){
+		if(this.repaymentMode.equals("按月还款")){
 			return "#8A1B13";
-		}else if(this.repaymentMode.equals("��������")){
+		}else if(this.repaymentMode.equals("到期还款")){
 			return "#D9E620";
-		}else if(this.repaymentMode.equals("���ڻ���")){
+		}else if(this.repaymentMode.equals("按季还款")){
 			return "#127505";
 		}else{
 			return "black";
 		}
 	}
 	public String loanTypeChangeColor(){
-		if(this.loanType.equals("���ñ�")){
+		if(this.loanType.equals("净值标")){
 			return "blue";
-		}else if(this.loanType.equals("��ֵ��")){
+		}else if(this.loanType.equals("信用标")){
 			return "#C4A00E";
-		}else if(this.loanType.equals("�Ƽ���")){
+		}else if(this.loanType.equals("推荐标")){
 			return "#A90EC4";
-		}else if(this.loanType.equals("������")){
+		}else if(this.loanType.equals("流转标")){
 			return "#0CC94E";
-		}else if(this.loanType.equals("��ת��")){
+		}else if(this.loanType.equals("担保标")){
 			return "red";
 		}else{
 			return null;
@@ -276,5 +278,29 @@ public class LoanInfoBean implements Serializable{
 	}
 	public String durationDaysFormat(){
 		return this.durationDays+"天";
+	}
+	public String moneyFormat(){
+		String s = this.money+"";
+		int len = s.length();
+		List <String> list = new ArrayList() ;
+		int n = 1;
+		for(int i=len-1;i>=0;i=i-3){
+			if(i-2<=0){
+				list.add(s.substring(0,i+1));
+				break;
+			}
+			list.add(s.substring(i-2, i+1));
+			
+		}
+		String ss="";
+		for(int i=list.size()-1;i>=0;i--){
+			System.out.println(list.get(i));
+			if(i==0){
+				ss = ss + list.get(i);
+				break;
+			}
+			ss = ss + list.get(i) + ",";
+		}
+		return ss;
 	}
 }
