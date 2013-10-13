@@ -28,26 +28,26 @@
 		
 		
   
-    <p:dataTable id="dataTable" var="data" value="#{webDataBean.list}" rowIndexVar="row" rowStyleClass="#{row%2==0?'yellow':null}" >  
+    <p:dataTable id="dataTable" var="data" value="#{webDataBean.list}" rowIndexVar="row" rowStyleClass="#{row%2==0?'yellow':null}" stickyHeader="true">  
         <f:facet name="header" >  
             	网站平台数据对比
         </f:facet>  
         
-      <p:column  headerText="序号"  >  
+      <p:column  headerText="序号" style="width:50px" >  
             <div class="id"><h:outputText value="#{row+1}" /></div>  
         </p:column> 
   
   			
         <p:column  headerText="平台" style="width:80px">  
-            <div ><a href="#{data.link}"><h:outputText value="#{data.webSiteName}" style="color:blue"/> </a></div>  
+            <div ><a href="#{data.link}" target="_blank"><h:outputText value="#{data.webSiteName}" style="color:blue"/> </a></div>  
         </p:column>  
        
         
-          <p:column headerText="上线时间" sortBy="#{data.startTime}" >  
+          <p:column headerText="上线时间" sortBy="#{data.startTime}" style="width:100px" >  
             <div ><h:outputText value="#{data.startTime}" style="color:green"/> </div>
         </p:column>  
         
-          <p:column  headerText="注册资金" sortBy="#{data.registerMoney}" >  
+          <p:column  headerText="注册资金" sortBy="#{data.registerMoney}" style="width:100px" >  
            <div > <h:outputText value="#{data.registerMoney}" style="color:red"/></div>
         </p:column>  
         
@@ -75,7 +75,7 @@
             <div><h:outputText value="#{data.dianfu}" /></div>  
         </p:column>  
         
-          <p:column  headerText="VIP年费">  
+          <p:column  headerText="VIP年费" style="width:80px">  
             <div><h:outputText value="#{data.vip}" /></div>  
         </p:column>  
        

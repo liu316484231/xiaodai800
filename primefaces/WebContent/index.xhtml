@@ -15,10 +15,10 @@
 		<script type="text/javascript">
 
 		
-		function reflesh(){	
+		function refresh(){	
 			document.location.reload();
 		}
-		setTimeout("reflesh()",60*1000*2);
+		setTimeout("refresh()",60*1000*2);
 		
 		
 	
@@ -69,7 +69,7 @@
         </p:column>  
         
           <p:column  headerText="标题" style="width:200px">  
-           <div class="obligorid"><a href="#{lfb.detailURL}" target="_blank" title="用户'#{lfb.obligorId}'发布：#{lfb.title}"> <h:outputText value="#{lfb.getTitleShort()==''?'--':lfb.getTitleShort()}" /> </a></div>
+           <div class="obligorid"><a href="#{lfb.detailURL}" target="_blank" title="用户'#{lfb.obligorId}'发布：#{lfb.title}" style="color:blue"> <h:outputText value="#{lfb.getTitleShort()==''?'--':lfb.getTitleShort()}" /> </a></div>
         </p:column>  
         
           <p:column sortBy="#{lfb.money}" headerText="金额" >  
@@ -108,7 +108,7 @@
             <div class="bidendtime"><h:outputText value="#{lfb.bidEndTime==null?'---':lfb.bidEndTime}" /></div>  
         </p:column>  
   		
-  		  <p:column sortBy="#{lfb.repaymentMode}" headerText="还款方式">  
+  		  <p:column sortBy="#{lfb.repaymentMode}" headerText="还款方式" style="width:150px">  
             <div class="repaymentmode"><h:outputText value="#{lfb.repaymentMode}" style="color:#{lfb.repaymentModeChangeColor()}" /></div>  
         </p:column>  
 		

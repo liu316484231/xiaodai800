@@ -250,7 +250,7 @@ public class LoanInfoBean implements Serializable{
 	}
 	public String loanTypeChangeColor(){
 		if(this.loanType.equals("净值标")){
-			return "blue";
+			return "black";
 		}else if(this.loanType.equals("信用标")){
 			return "#C4A00E";
 		}else if(this.loanType.equals("推荐标")){
