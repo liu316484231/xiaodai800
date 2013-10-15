@@ -14,24 +14,37 @@
 		
 	</script>
 	<style>
+		body{
+			margin:0;
+			padding:0;
+		}
 		#calculator{
 			margin:auto;
 			height:300px;
-			width:400px;
+			width:600px;
+			margin-top:25px;
 		}
 		#result{
 			font-weight:bold;
 			color:red;
 		}
+		#red{
+			color:red;
+		}
+		.green{
+			color:green;
+		}
 	
 	</style>
 </h:head>
 <h:body>
+
+	
 	<p:tabMenu activeIndex="1">
 		<p:menuitem value="首页" url="/index.xhtml" icon="ui-icon-star" />
 		<p:menuitem value="网贷计算器" url="#"  />
 		<p:menuitem value="平台比较" url="/websitesdata.xhtml"  />
-		<p:menuitem value="联系我们" url="/contacts.xhtml" />
+		<p:menuitem value="小贷抢标" url="/qiangbiao.xhtml" />
 		<p:menuitem value="登陆小贷800" url="/login.jsp" icon="ui-icon-person" />  
 	</p:tabMenu>
 
@@ -45,35 +58,59 @@
     </f:facet>  
 
     <p:row>  
-        <p:column colspan="2">年利率:</p:column>  
-       	<p:column colspan="4"><p:inputText value="#{calbean.yearinterestrate}" required="true" /> %</p:column>  
+        <p:column colspan="2" style="text-align:center">利率:</p:column>  
+       	<p:column colspan="4">
+       		<p:inputText value="#{calbean.yearinterestrate}" required="true" />
+       		<h:outputText value="%" /> 
+       		 <p:selectOneRadio id="options1" value="#{formBean.number}" plain="true">  
+		            <f:selectItem itemLabel="年利率" itemValue="1" />  
+		            <f:selectItem itemLabel="日利率" itemValue="2" />  
+		      	 </p:selectOneRadio> 
+       
+		        
+        </p:column>  
+      
+        	
   	</p:row>  
   	
   	  <p:row>  
-        <p:column colspan="2">投标奖励率：</p:column>  
-       	<p:column colspan="4"><p:inputText  value="#{calbean.bonusrate}" required="false" /> %</p:column>  
+        <p:column colspan="2" style="text-align:center">投标奖励率：</p:column>  
+       	<p:column colspan="4">
+	       	<p:inputText  value="#{calbean.bonusrate}" required="false" /> 
+	       	<h:outputText value=" %(可选填)" />
+       	</p:column>  
   	</p:row>  
   	
   	  <p:row>  
-        <p:column colspan="2">管理费率：</p:column>  
-       	<p:column colspan="4"><p:inputText  value="#{calbean.managementrate}" required="false" /> %</p:column>  
+        <p:column colspan="2" style="text-align:center">管理费率：</p:column>  
+       	<p:column colspan="4"><p:inputText  value="#{calbean.managementrate}" required="false" />
+       		<h:outputText value=" %(可选填)" />
+       	</p:column>  
   	</p:row>  
   	
   	  <p:row>  
-        <p:column colspan="2">期限：</p:column>  
-       	<p:column colspan="4"><p:inputText value="#{calbean.timelimit}" required="true" /> 月</p:column>  
+        <p:column colspan="2" style="text-align:center">期限：</p:column>  
+       	<p:column colspan="4">	
+       		<p:inputText value="#{calbean.timelimit}" required="true" /> 
+       		 <p:selectOneRadio id="options2" value="#{formBean.number}" plain="true" >  
+		            <f:selectItem itemLabel="月" itemValue="1" />  
+		            <f:selectItem itemLabel="天" itemValue="2" />  
+		      </p:selectOneRadio> 
+       	
+       	
+       	</p:column>  
   
   	</p:row>  
   	
   	  <p:row>  
-        <p:column colspan="2">投标金额：</p:column>  
+        <p:column colspan="2" style="text-align:center">投标金额：</p:column>  
        	<p:column colspan="4"><p:inputText  value="#{calbean.money}" required="true" /> 元</p:column>  
   	</p:row>  
   	
   
   
 	 <p:row>  
-        <p:column colspan="2">还款方式：</p:column>  
+        <p:column colspan="2" style="text-align:center">还款方式：</p:column>  
        	<p:column colspan="4">   
 	           <p:selectOneListbox id="basic" value="#{calbean.repaymentmode}">  
             <f:selectItem itemLabel="按月还本息" itemValue="1" />  
@@ -86,13 +123,38 @@
 
     <f:facet name="footer">  
         <p:row>  
-        	<p:column colspan="2"><p:commandButton value="计算" update="display"  onclick="return cal()"/> </p:column>  
+        	<p:column colspan="2" rowspan="5"><p:commandButton value="计算" update="display"  onclick="return cal()"/> </p:column>  
             <p:column colspan="4" >  
-                	总收益(含奖励)  ：<div id="result"><h:outputText value="#{calbean.calculator()}" id="display"/></div>元
-            </p:column>  
-            
+                	<div id="red"><h:outputText value="总收益：#{calbean.calculator()}元" id="display"/></div>
+            </p:column> 
         </p:row>  
-  
+  		 <p:row>  
+        
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value=" 年化利率：#{calbean.calculator()}%" id="display"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="复利利率：#{calbean.calculator()}%" id="display"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="年化月利率：#{calbean.calculator()}%" id="display"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="复利月利率：#{calbean.calculator()}%" id="display"/></div>
+            </p:column> 
+        </p:row>  
      
     </f:facet>  
 </p:panelGrid>   
