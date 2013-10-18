@@ -28,7 +28,7 @@
 			font-weight:bold;
 			color:red;
 		}
-		#red{
+		.red{
 			color:red;
 		}
 		.green{
@@ -62,7 +62,7 @@
        	<p:column colspan="4">
        		<p:inputText value="#{calbean.yearinterestrate}" required="true" />
        		<h:outputText value="%" /> 
-       		 <p:selectOneRadio id="options1" value="#{formBean.number}" plain="true">  
+       		 <p:selectOneRadio id="options1" value="#{calbean.option1}" plain="true">  
 		            <f:selectItem itemLabel="年利率" itemValue="1" />  
 		            <f:selectItem itemLabel="日利率" itemValue="2" />  
 		      	 </p:selectOneRadio> 
@@ -92,7 +92,7 @@
         <p:column colspan="2" style="text-align:center">期限：</p:column>  
        	<p:column colspan="4">	
        		<p:inputText value="#{calbean.timelimit}" required="true" /> 
-       		 <p:selectOneRadio id="options2" value="#{formBean.number}" plain="true" >  
+       		 <p:selectOneRadio id="options2" value="#{calbean.option2}" plain="true" >  
 		            <f:selectItem itemLabel="月" itemValue="1" />  
 		            <f:selectItem itemLabel="天" itemValue="2" />  
 		      </p:selectOneRadio> 
@@ -121,41 +121,42 @@
         </p:column>  
   	</p:row>  
 
-    <f:facet name="footer">  
+    <f:facet name="footer" >  
         <p:row>  
-        	<p:column colspan="2" rowspan="5"><p:commandButton value="计算" update="display"  onclick="return cal()"/> </p:column>  
+        	 <p:column colspan="2" rowspan="5"><p:commandButton value="计算" update="display display2 display3 display4 display5" /> </p:column>   
             <p:column colspan="4" >  
-                	<div id="red"><h:outputText value="总收益：#{calbean.calculator()}元" id="display"/></div>
-            </p:column> 
-        </p:row>  
-  		 <p:row>  
-        
-            <p:column colspan="4" >  
-                	<div class="green"><h:outputText value=" 年化利率：#{calbean.calculator()}%" id="display"/></div>
-            </p:column> 
-        </p:row>  
-        
-         <p:row>  
-        	
-            <p:column colspan="4" >  
-                	<div class="green"><h:outputText value="复利利率：#{calbean.calculator()}%" id="display"/></div>
-            </p:column> 
-        </p:row>  
-        
-         <p:row>  
-        	
-            <p:column colspan="4" >  
-                	<div class="green"><h:outputText value="年化月利率：#{calbean.calculator()}%" id="display"/></div>
-            </p:column> 
-        </p:row>  
-        
-         <p:row>  
-        	
-            <p:column colspan="4" >  
-                	<div class="green"><h:outputText value="复利月利率：#{calbean.calculator()}%" id="display"/></div>
+                	<div class="red"><h:outputText value="总收益：#{calbean.calculateIncome()}元(含奖励)" id="display" /></div>
             </p:column> 
         </p:row>  
      
+  		 <p:row>  
+        
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value=" 年化利率：#{calbean.calculateYearInterest()}%" id="display2"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="复利利率：#{calbean.calculateCompoundInterest()}%" id="display3"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="年化月利率：#{calbean.calculateMonthInterest()}%" id="display4"/></div>
+            </p:column> 
+        </p:row>  
+        
+         <p:row>  
+        	
+            <p:column colspan="4" >  
+                	<div class="green"><h:outputText value="复利月利率：#{calbean.calculateMonthCompoundInterest()}%" id="display5"/></div>
+            </p:column> 
+        </p:row>  
+ 
     </f:facet>  
 </p:panelGrid>   
 	
